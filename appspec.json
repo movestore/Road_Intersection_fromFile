@@ -1,11 +1,24 @@
 {
   "settings": [
-      {
+    {
       "id": "road_files",
       "name": "Directory for required files.",
-      "description": "Select the folder/files that you need for running the road intersection analysis.",
-      "defaultValue": null,
-      "type": "STRING"
+      "description": "Select the folder/files that you need for running the road intersection analysis. The app expects: 1. `GRIP_roads_NASY2Y.shp` (street data)",
+      "type": "LOCAL_FILE",
+      "targetDirectory": "GRIP_roads_NASAY2Y"
+    },
+    {
+      "id": "poc_files",
+      "name": "Directory for some more files (POC multifile upload).",
+      "description": "The app expects: 1. `studies.csv` (just to test the multi-file upload); 2. `empty.txt`. This is a very long explanation - how good does it look on <b>MoveApps</b>?",
+      "type": "LOCAL_FILE",
+      "targetDirectory": "poc"
+    }
+  ],
+  "includeFiles": [
+    {
+      "from": "GRIP_roads_NASY2Y/*",
+      "to": "GRIP_roads_NASY2Y"
     }
   ],
   "dependencies": {
@@ -13,19 +26,19 @@
       {
         "name": "move"
       },
-	  {
+      {
         "name": "sp"
       },
-	  	  {
+      {
         "name": "sf"
       },
-	  	  {
+      {
         "name": "ggplot2"
       },
-	  	  {
+      {
         "name": "adehabitatLT"
       },
-	  	  {
+      {
         "name": "geosphere"
       }
     ]
@@ -36,14 +49,16 @@
   },
   "language": "eng",
   "keywords": [
+    "POC",
     "road intersection",
     "street intersection",
     "upload external file",
-	"global roads data set"
+    "local file setting",
+    "global roads data set"
   ],
   "people": [
     {
-     "firstName": "Andrea",
+      "firstName": "Andrea",
       "middleInitials": null,
       "lastName": "Kölzsch",
       "email": "akoelzsch@ab.mpg.de",

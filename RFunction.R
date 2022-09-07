@@ -5,12 +5,16 @@ library('ggplot2')
 library('adehabitatLT')
 library('geosphere')
 
-rFunction <- function(data,road_files="GRIP_roads_NASAY2Y")
+rFunction <- function(data)
 {
   Sys.setenv(tz="UTC")
-  
-  roads <- st_read(paste0(road_files,"/",road_files,".shp"))
-  
+
+  # convention:
+  # the app can expect that the folders defined in `targetFolder` (`appspec.json`) are present
+
+  roads <- st_read(paste0("GRIP_roads_NASAY2Y","/","GRIP_roads_NASAY2Y.shp"))
+  logger.info(paste0("If you can see this, the file upload was successful: ", file.info("poc/studies.csv")))
+
   data_ltraj <-as(data,"ltraj")
   data_spdf <- ltraj2sldf(data_ltraj,byid=TRUE)
   
