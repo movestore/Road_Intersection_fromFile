@@ -5,7 +5,8 @@ library('ggplot2')
 library('adehabitatLT')
 library('geosphere')
 
-rFunction <- function(data)
+# [1] "ERROR:  Error in (function (data) : unused arguments (road_files = [..])
+rFunction <- function(data, road_files=NULL, poc_files=NULL)
 {
   Sys.setenv(tz="UTC")
 
