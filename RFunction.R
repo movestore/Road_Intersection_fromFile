@@ -11,10 +11,10 @@ rFunction <- function(data, road_files=NULL, poc_files=NULL)
   Sys.setenv(tz="UTC")
 
   # convention:
-  # the app can expect that the folders defined in `targetFolder` (`appspec.json`) are present
+  # the app can expect that the folders defined in `targetFolder` (`appspec.json`) are present in `./user-files/`
 
-  roads <- st_read(paste0("GRIP_roads_NASAY2Y","/","GRIP_roads_NASAY2Y.shp"))
-  logger.info(paste0("If you can see this, the file upload was successful: ", file.info("poc/studies.csv")))
+  roads <- st_read(paste0("user-files/GRIP_roads_NASAY2Y","/","GRIP_roads_NASAY2Y.shp"))
+  logger.info(paste0("If you can see this, the file upload was successful: ", file.info("user-files/poc/studies.csv")))
 
   data_ltraj <-as(data,"ltraj")
   data_spdf <- ltraj2sldf(data_ltraj,byid=TRUE)
