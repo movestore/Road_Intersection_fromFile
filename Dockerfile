@@ -1,8 +1,8 @@
-FROM registry.gitlab.com/couchbits/movestore/movestore-groundcontrol/co-pilot-v1-r:geospatial-4.1.2-2809
+FROM --platform=linux/amd64 moveapps/co-pilot-v1-r:geospatial-4.1.2-local-app-files
 
 # install system dependencies required by this app
 
-WORKDIR /root/app
+WORKDIR /home/moveapps/co-pilot-r
 
 # install the R dependencies this app needs
 RUN R -e 'remotes::install_version("move")'
@@ -15,9 +15,7 @@ RUN R -e 'remotes::install_version("geosphere")'
 # take a snapshot of all R dependencies
 RUN R -e 'renv::snapshot()'
 
-# TODO: move to co-pilot image
-COPY app-files.R .
 # copy the app as late as possible
 # therefore following builds can use the docker cache of the R dependency installations
-COPY RFunction.R .
-COPY provided-app-files/GRIP_roads_NASAY2Y/ provided-app-files/GRIP_roads_NASAY2Y/
+COPY --chown=moveapps:staff RFunction.R .
+COPY --chown=moveapps:staff provided-app-files/GRIP_roads_NASAY2Y/ provided-app-files/GRIP_roads_NASAY2Y/
