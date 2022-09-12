@@ -24,5 +24,3 @@ appFileTargetDirectory <- function(targetDirectory, fallbackToProvidedFiles=TRUE
         }
     }
 }
-
-abspath <- function(files)file.path(normalizePath(dirname(files)), files)
