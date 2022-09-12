@@ -4,7 +4,7 @@
 #' - must not exist during runtime (eg the user did not upload anything)
 #' - can also be provided by the app developer and gets bundled into the app during build time (the fallback)
 #' 
-#' @param targetDirectory The parent directory of the requested set of app-files (see conterpart in `appspec.json`)
+#' @param targetDirectory The parent directory of the requested set of app-files (see counterpart in `appspec.json`)
 #' @param fallbackToProvidedFiles Fallback to bundled directory of requested set of app-files (in case the app-developer provided a fallback)?
 #' @return Path to the requested set of files (the app-file parent directory). Or `NULL` if user did not upload anything and no fallback was provided
 appFileTargetDirectory <- function(targetDirectory, fallbackToProvidedFiles=TRUE) {
