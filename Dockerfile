@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 moveapps/co-pilot-v1-r:geospatial-4.1.2-local-app-files
+FROM registry.gitlab.com/couchbits/movestore/movestore-groundcontrol/co-pilot-v1-r:geospatial-4.1.2-2938
 
 # install system dependencies required by this app
 
