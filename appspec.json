@@ -2,21 +2,22 @@
   "settings": [
     {
       "id": "road_files",
-      "name": "Directory for required files.",
+      "name": "Road files",
       "description": "Files for running the road intersection analysis. The app expects: 1. `GRIP_roads_NASAY2Y.cpg`, 2. `GRIP_roads_NASAY2Y.dbf`, 3. `GRIP_roads_NASAY2Y.prj`, 4. `GRIP_roads_NASAY2Y.shp`, 5. `GRIP_roads_NASAY2Y.shx`",
       "type": "LOCAL_FILE"
     },
     {
       "id": "poc_files",
-      "name": "Directory for some more files (POC multifile upload).",
+      "name": "Some more files (POC multifile upload)",
       "description": "The app expects: 1. `studies.csv` (just to test the multi-file upload); 2. `empty.txt`. This is a very long explanation - how good does it look on <b>MoveApps</b>?",
       "type": "LOCAL_FILE"
     }
   ],
   "providedAppFiles": [
     {
-      "from": "provided-app-files/road_files/",
-      "to": "road_files/"
+
+      "settingId": "road_files",
+      "from": "provided-app-files/road_files/"
     }
   ],
   "dependencies": {
