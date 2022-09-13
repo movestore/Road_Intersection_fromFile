@@ -3,7 +3,7 @@
     {
       "id": "road_files",
       "name": "Directory for required files.",
-      "description": "Select the folder/files that you need for running the road intersection analysis. The app expects: 1. `GRIP_roads_NASY2Y.shp` (street data)",
+      "description": "Files for running the road intersection analysis. The app expects: 1. `GRIP_roads_NASAY2Y.cpg`, 2. `GRIP_roads_NASAY2Y.dbf`, 3. `GRIP_roads_NASAY2Y.prj`, 4. `GRIP_roads_NASAY2Y.shp`, 5. `GRIP_roads_NASAY2Y.shx`",
       "type": "LOCAL_FILE"
     },
     {
