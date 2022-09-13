@@ -17,8 +17,8 @@
   ],
   "providedAppFiles": [
     {
-      "from": "provided-app-files/GRIP_roads_NASY2Y/*",
-      "to": "GRIP_roads_NASY2Y"
+      "from": "provided-app-files/GRIP_roads_NASAY2Y/",
+      "to": "GRIP_roads_NASAY2Y/"
     }
   ],
   "dependencies": {
