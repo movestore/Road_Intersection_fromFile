@@ -5,12 +5,6 @@
       "name": "Road files",
       "description": "Files for running the road intersection analysis. The app expects: 1. `GRIP_roads_NASAY2Y.cpg`, 2. `GRIP_roads_NASAY2Y.dbf`, 3. `GRIP_roads_NASAY2Y.prj`, 4. `GRIP_roads_NASAY2Y.shp`, 5. `GRIP_roads_NASAY2Y.shx`",
       "type": "LOCAL_FILE"
-    },
-    {
-      "id": "poc_files",
-      "name": "Some more files (POC multifile upload)",
-      "description": "The app expects: 1. `studies.csv` (just to test the multi-file upload); 2. `empty.txt`. This is a very long explanation - how good does it look on <b>MoveApps</b>?",
-      "type": "LOCAL_FILE"
     }
   ],
   "providedAppFiles": [
@@ -48,11 +42,11 @@
   },
   "language": "eng",
   "keywords": [
-    "POC",
     "road intersection",
     "street intersection",
-    "upload external file",
-    "local file setting",
+    "user files",
+    "local files",
+    "file upload",
     "global roads data set"
   ],
   "people": [

@@ -5,17 +5,12 @@ library('ggplot2')
 library('adehabitatLT')
 library('geosphere')
 
-# [1] "ERROR:  Error in (function (data) : unused arguments (road_files = [..])
-rFunction <- function(data, road_files=NULL, poc_files=NULL)
+rFunction <- function(data, road_files=NULL)
 {
   Sys.setenv(tz="UTC")
 
-  # convention:
-  # the app can expect that the folders defined in `targetFolder` (`appspec.json`) are present in `./user-files/`
-
   roads <- st_read(paste0(getAppFilePath("road_files"),"GRIP_roads_NASAY2Y.shp"))
-  logger.info(paste0("If it's true, the file upload was successful: ", file.info(paste0(getAppFilePath("poc_files", FALSE)),"studies.csv")))
-
+  
   data_ltraj <-as(data,"ltraj")
   data_spdf <- ltraj2sldf(data_ltraj,byid=TRUE)
   
