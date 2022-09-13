@@ -4,21 +4,19 @@
       "id": "road_files",
       "name": "Directory for required files.",
       "description": "Select the folder/files that you need for running the road intersection analysis. The app expects: 1. `GRIP_roads_NASY2Y.shp` (street data)",
-      "type": "LOCAL_FILE",
-      "targetDirectory": "GRIP_roads_NASAY2Y"
+      "type": "LOCAL_FILE"
     },
     {
       "id": "poc_files",
       "name": "Directory for some more files (POC multifile upload).",
       "description": "The app expects: 1. `studies.csv` (just to test the multi-file upload); 2. `empty.txt`. This is a very long explanation - how good does it look on <b>MoveApps</b>?",
-      "type": "LOCAL_FILE",
-      "targetDirectory": "poc"
+      "type": "LOCAL_FILE"
     }
   ],
   "providedAppFiles": [
     {
-      "from": "provided-app-files/GRIP_roads_NASAY2Y/",
-      "to": "GRIP_roads_NASAY2Y/"
+      "from": "provided-app-files/road_files/",
+      "to": "road_files/"
     }
   ],
   "dependencies": {
