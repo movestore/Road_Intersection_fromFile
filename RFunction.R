@@ -62,7 +62,7 @@ rFunction <- function(data, road_files=NULL)
       loc_neari <- coordinates(datai)[min(which(dists2crssi==min(dists2crssi))),]
       long_near[i] <- loc_neari[1]
       lat_near[i] <- loc_neari[2]
-      species[i] <- idData(datai)$taxon_canonical_name
+      if (any(names(idData(datai))=="taxon_canonical_name")) species[i] <- idData(datai)$taxon_canonical_name else if (any(names(idData(datai))=="individual_taxon_canonical_name")) species[i] <- idData(datai)$individual_taxon_canonical_name else species[i] <- NA
       sensor[i] <- as.character(sensor(datai))[1]
     }
     
